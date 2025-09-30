@@ -79,18 +79,26 @@ The system is CLI-driven. Examples:
 
 ```bash
 
+# create venv (Python 3.10+ recommended)
+python -m venv env
 
+# activate venv
+source env/bin/activate       # on Linux / macOS
 
-# Build TF-IDF index
+# install dependencies
+pip install --upgrade pip
+pip install -r requirements.txt
+
+# Build TF-IDF index ( will create the bundle models/tfidf/tfidf_index.joblib ) 
 python src/tfidf.py build --db data/db/docstore.db --model models/tfidf
 
-# Search via TF-IDF
+# Search via TF-IDF ( will return top 5 cves based on cosine similliarty  ) 
 python src/tfidf.py search --model models/tfidf --query "openssl buffer overflow"
 
-# Generate embeddings + store in SQLite
+# Generate embeddings + store in SQLite ( will download once the MiniLM-L6-v2-onnx variant to models/embeddings ) 
 python src/embeddings.py build --db data/db/docstore.db
 
-# Vector search
+# Vector search ( will return top 5 cves based on distance and converted to similiarity ) 
 python src/embeddings.py search --db data/db/docstore.db --query "remote code execution in apache"
 ```
 
