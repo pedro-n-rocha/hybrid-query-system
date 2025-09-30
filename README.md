@@ -74,8 +74,30 @@ The system is evolving into a minimal **retrieval-augmented generation (RAG)** p
 
 ---
 
+## Download Local LLM Model
+
+This project uses [TinyLlama 1.1B Chat](https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF) (Q4_K_M quantization).  
+Download the model to `models/llm/` before running `src/local-llm.py`:
+
+```bash
+wget -O models/llm/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf \
+  https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf
+```
+## Download CVE Data
+
+This project uses the official [NVD CVE JSON feeds](https://nvd.nist.gov/vuln/data-feeds).  
+Download the most recent feed into `data/cves/`:
+
+```bash
+mkdir -p data/cves
+wget https://nvd.nist.gov/feeds/json/cve/2.0/nvdcve-2.0-recent.json.gz \
+  -O data/cves/nvdcve-2.0-recent.json.gz
+gunzip -f data/cves/nvdcve-2.0-recent.json.gz
+```
+
 ## Usage
 The system is CLI-driven. Examples:
+
 
 ```bash
 

@@ -4,8 +4,5 @@ scikit-learn # for tdifd stuff
 pandas # better data handling
 flatten-json #helper cleaner code 
 fastembed # embeddings version
+llama-cpp-python # for the local model 
 
-# optional extras
-llama-cpp-python ; extra == "router"
-sentence-transformers ; extra == "embeddings-local"
-onnxruntime ; extra == "embeddings-onnx"

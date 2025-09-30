@@ -44,7 +44,7 @@ def main():
     import argparse
 
     ap = argparse.ArgumentParser()
-    ap.add_argument("--json", required=True)
+    ap.add_argument("--json", default="data/cves/nvdcve-2.0-recent.json")
     ap.add_argument("--db", default="data/db/docstore.db")
     args = ap.parse_args()
 
