@@ -1,0 +1,11 @@
+numpy
+sqlite-vec # vectorize columns , simple and easy , faiss could be used in mem
+scikit-learn # for tdifd stuff
+pandas # better data handling
+flatten-json #helper cleaner code 
+fastembed # embeddings version
+
+# optional extras
+llama-cpp-python ; extra == "router"
+sentence-transformers ; extra == "embeddings-local"
+onnxruntime ; extra == "embeddings-onnx"
