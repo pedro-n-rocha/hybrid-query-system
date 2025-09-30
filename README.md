@@ -122,6 +122,23 @@ python src/embeddings.py build --db data/db/docstore.db
 
 # Vector search ( will return top 5 cves based on distance and converted to similiarity ) 
 python src/embeddings.py search --db data/db/docstore.db --query "remote code execution in apache"
+
+# use the llm without audmentation
+python src/llm.py --query "Explain what a CVE is in one sentence."
+```
+
+# Interactive CVE Chat (LLM-powered)
+
+Once you’ve built the TF-IDF index and embeddings:
+
+```bash
+# Start the interactive chat CLI
+python src/cve-chat.py
+
+CVE chat — type 'exit' to quit.
+> what are recent OpenSSL vulnerabilities?
+- concise synthesized answer from TinyLlama...
+
 ```
 
 ⚡ This is an active exploration project: expect it to evolve rapidly as new components (router, reranking, answer generation) are integrated.
