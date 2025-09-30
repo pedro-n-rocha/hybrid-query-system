@@ -69,7 +69,7 @@ The system is evolving into a minimal **retrieval-augmented generation (RAG)** p
 - ✅ Store embeddings in `sqlite-vec`  
 - 🔄 Router logic (hybrid SQL + vector retrieval)  
 - 🔄 Reranking with stronger embeddings  
-- 🔄 Local LLM integration for synthesis  
+- ✅ Local LLM integration for synthesis  
 - 🔮 Structured query translation with SQL generation  
 
 ---
