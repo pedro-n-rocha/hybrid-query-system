@@ -70,6 +70,7 @@ The system is evolving into a minimal **retrieval-augmented generation (RAG)** p
 - 🔄 Router logic (hybrid SQL + vector retrieval)  
 - 🔄 Reranking with stronger embeddings  
 - ✅ Local LLM integration for synthesis  
+- ✅ CLI chat front-end
 - 🔮 Structured query translation with SQL generation  
 
 ---
