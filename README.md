@@ -65,6 +65,7 @@ The system is evolving into a minimal **retrieval-augmented generation (RAG)** p
 ## Roadmap
 - ✅ Data ingestion into SQLite  
 - ✅ TF-IDF search baseline  
+- 🔄 BM25 search 
 - ✅ Dense embeddings via FastEmbed  
 - ✅ Store embeddings in `sqlite-vec`  
 - 🔄 Router logic (hybrid SQL + vector retrieval)  
